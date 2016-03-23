@@ -1,0 +1,25 @@
+{
+  "manifest_version": 2,
+
+  "name": "Quidco Webops extension",
+  "description": "This extension has hacks in it for web ops",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html",
+    "default_title": "Alpha"
+  },
+  "permissions": [
+    "activeTab"
+  ],
+  "content_scripts": [
+    {
+      
+      "matches": ["*://quidco.atlassian./*"],
+      "css": ["popup.css"],
+      "js": ["popup.js","get_users.js","toggle.js"]
+    }
+    
+  ]
+}
